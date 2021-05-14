@@ -13,6 +13,7 @@ app.get('/fakeauth', async (req, res) => {
 	return res.redirect(req.query.redirect_uri + '?code=supersecureauthcode&state=' + req.query.state);
 });
 
+//todo: fix oauth2
 app.all('/faketoken', async (req, res) => {
 	const grantType = req.query.grant_type ? req.query.grant_type : req.body.grant_type;
 	console.debug('grantType:', grantType, 'authCode;', req.body.code)
