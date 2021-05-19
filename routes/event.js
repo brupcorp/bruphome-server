@@ -5,19 +5,9 @@ module.exports = function(sockSrv, options){
 	router.get('/getPending', (req, res) => res.send(sockSrv.pendingRequests));
 	router.get('/getClients', (req, res) => res.send(Object.keys(sockSrv.clients)));
 
-	router.get('/:event', (req, res) => {
-		if(!req.query.id){
-			res.send('no id');
-			return;
-		}
-	
-		const id = req.query.id;
-		var data = req.query;
-		delete data.id;
-	
-		sockSrv.sendRequest(id, req.params.event, data, (response) => {
-			res.json(response)
-		})
+	router.get('/:id/:event', (req, res) => {
+		
+		sockSrv.sendRequest(req.params.id, req.params.event, req.query, res.json(response)
 	
 	});
 
