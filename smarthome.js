@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { smarthome } = require('actions-on-google')
 
-
-
 // Create an app instance
 const app = smarthome({ jwt: require('./serviceKey.json') });
 
