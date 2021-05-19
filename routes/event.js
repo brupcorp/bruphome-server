@@ -7,7 +7,9 @@ module.exports = function(sockSrv, options){
 
 	router.get('/:id/:event', (req, res) => {
 		
-		sockSrv.sendRequest(req.params.id, req.params.event, req.query, res.json)
+		sockSrv.sendRequest(req.params.id, req.params.event, req.query, (resp) => {
+			res.json(resp);
+		})
 	
 	});
 
