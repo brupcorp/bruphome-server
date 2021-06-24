@@ -8,7 +8,8 @@ import controller from '../home/socketlayer';
 app.get('/getPending', (req, res) => res.send(controller.pendingRequests));
 app.get('/getClients', (req, res) => res.send(Object.keys(controller.clients)));
 
-app.all('/fulfillment', smarthome);
+app.post('/fulfillment', smarthome);
+
 app.get('/oauth', async (req, res) => {
 	console.debug('client_id:', req.query.client_id);
 	return res.redirect(req.query.redirect_uri + '?code=supersecureauthcode&state=' + req.query.state);
