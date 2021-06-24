@@ -1,18 +1,28 @@
 {
-  "name": "espbridge",
+  "name": "brupme-autoroute-bruphome-tester",
   "version": "1.0.0",
+  "description": "express server with auto-loading routes",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "test": "node watcher.js --esm index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "cmplx",
+  "license": "MIT",
   "dependencies": {
     "actions-on-google": "^2.14.0",
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.1",
+    "cheerio": "^1.0.0-rc.10",
+    "cookie-parser": "^1.4.5",
+    "esbuild": "^0.12.9",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
+    "mime": "^2.5.2",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
-    "socket.io": "^4.1.2"
+    "preact": "^10.5.13",
+    "serve-favicon": "^2.5.0",
+    "serve-index": "^1.9.1",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2"
   }
 }

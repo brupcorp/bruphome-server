@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const { smarthome } = require('actions-on-google')
+import fs from 'fs';
+import path from 'path';
+import { smarthome } from 'actions-on-google';
 
 // Create an app instance
 const app = smarthome({ jwt: require('./serviceKey.json') });
@@ -74,4 +74,4 @@ app.onSync((body, headers) => {
 	}
 })
 
-module.exports = app;
+export default app;

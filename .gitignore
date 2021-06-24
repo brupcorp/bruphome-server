@@ -1,2 +1,16 @@
-node_modules/
+fileserver.json
+package-lock.json
+data
+node_modules
+temp
+fileshare-config.js
+bundle
+.cache
+dist
+yarn.lock
+package_lock.json
+.env
+public/*
+!public/404.html
+!public/favicon.png
 serviceKey.json
